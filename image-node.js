@@ -13,7 +13,7 @@ let req=https.request(HOST+'teacher.html',res=>{
         
         let imgs=Array.prototype.map.call($('.tea_main .tea_con .li_img>img'),item=>HOST+encodeURI($(item).attr('src')) 
         )
-        console.log(imgs)
+        // console.log(imgs)
         Promise.all(imgs.map(x=>download(x,'img'))).then(()=>{
             console.log('ok')
         })
